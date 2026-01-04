@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetti | Andrea De Pisapia</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+
+<!-- NAVBAR MINIMAL -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">ADP</a>
+    </div>
+</nav>
+
+<!-- MAIN SECTION -->
+<section class="section projects-section">
+
+    <h2 class="projects-title" data-lang-key="projects_link">Progetti</h2>
+    <div class="neon-underline"></div>
+
+    <p class="projects-subtitle">
+        Seleziona un progetto per aprire i dettagli
+    </p>
+
+    <div class="projects-grid">
+
+        <!-- PROJECT 1 -->
+        <div class="project-card"
+            onclick="openProjectModal(
+                'HotRIO Control System',
+                'Firmware FPGA per acquisizione ADC, decodifica pacchetti HotRIO, gestione clock domain crossing e integrazione con CompactRIO.',
+                '<p><b>Tecnologie:</b> VHDL, FPGA Lattice, Fiber Optic SFP</p>'
+            )">
+            <h3>HotRIO Control System</h3>
+            <p>Firmware FPGA per ITER</p>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card"
+            onclick="openProjectModal(
+                'OPD Startup Logic / FSM',
+                'Macchina a stati per la protezione del sistema OPD basato su HotRIO: voting 1oo2, gestione segnali critici e diagnostica.',
+                '<p><b>Tecnologie:</b> Safety FSM, VHDL, HotRIO, ICM</p>'
+            )">
+            <h3>OPD Startup Logic</h3>
+            <p>FSM di sicurezza</p>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-card"
+            onclick="openProjectModal(
+                'Smart Greenhouse Control',
+                'Controllo predittivo avanzato (MPC, RMPC, SMPC, Markov Chains) + ARIMA modelling e simulazioni Monte Carlo.',
+                '<p><b>Tecnologie:</b> MPC, MATLAB, Modelli Probabilistici</p>'
+            )">
+            <h3>Smart Greenhouse Control</h3>
+            <p>MPC e simulazione predittiva</p>
+        </div>
+
+        <!-- PROJECT 4 -->
+        <div class="project-card"
+            onclick="openProjectModal(
+                'Robot Navigation ROS',
+                'Localizzazione tramite marker ArUco, controllo robotico e navigazione autonoma.',
+                '<p><b>Tecnologie:</b> ROS, C++, Computer Vision</p>'
+            )">
+            <h3>Robot Navigation ROS</h3>
+            <p>Localizzazione e controllo robotico</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MODAL DETTAGLI PROGETTO -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeProjectModal()">&times;</span>
+
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <div id="modalExtra"></div>
+    </div>
+</div>
+
+</body>
+</html>
