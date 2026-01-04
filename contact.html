@@ -1,64 +1,75 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contattami - Andrea De Pisapia</title>
+    <title>Contact | Carlos Cerro Miñana</title>
 
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js" defer></script>
 
-    <!-- Particles background (optional) -->
+    <!-- Particles background -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 
 <body>
 
-    <div id="particles-js"></div>
+<div id="particles-js"></div>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">adp</a>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">CCM</a>
 
-            <ul class="nav-links">
-                <li><a href="index.html#about" data-lang-key="about_link">Chi sono</a></li>
-                <li><a href="index.html#projects" data-lang-key="projects_link">Progetti</a></li>
-                <li><a href="contact.html" data-lang-key="contact_link" class="active">Contatti</a></li>
-            </ul>
+        <ul class="nav-links">
+            <li><a href="index.html#about" data-lang-key="about_link">About</a></li>
+            <li><a href="index.html#projects" data-lang-key="projects_link">Projects</a></li>
+            <li><a href="contact.html" class="active" data-lang-key="contact_link">Contact</a></li>
+        </ul>
 
-            <div class="lang-switch">
-                <span onclick="setLanguage('it')" id="lang-it">IT</span> |
-                <span onclick="setLanguage('en')" id="lang-en">EN</span>
-            </div>
+        <div class="lang-switch">
+            <span onclick="setLanguage('es')" id="lang-es">ES</span> |
+            <span onclick="setLanguage('en')" id="lang-en">EN</span>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <main class="contact-container">
+<!-- CONTACT CONTENT -->
+<main class="contact-container">
 
-        <h1 class="contact-title" data-lang-key="contact_title">Contatti</h1>
-        <div class="neon-underline"></div>
+    <h1 class="contact-title" data-lang-key="contact_title">Contact</h1>
+    <div class="neon-underline"></div>
 
-        <p class="contact-subtitle">
-            Per collaborazioni, progetti o informazioni, scrivimi qui.
+    <p class="contact-subtitle" data-lang-key="contact_subtitle">
+        Feel free to contact me for collaborations, projects or further information.
+    </p>
+
+    <!-- CONTACT INFO (recommended over mailto form) -->
+    <div class="contact-info">
+
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:carloscerrom2@gmail.com">carloscerrom2@gmail.com</a>
         </p>
 
-        <form action="mailto:andrea@mail.com" method="POST" enctype="text/plain" class="contact-form">
+        <p>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/cerroca/" target="_blank">
+                github.com/cerroca
+            </a>
+        </p>
 
-            <label data-lang-key="form_name">Nome</label>
-            <input type="text" name="name" required>
+        <p>
+            <strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/carlos-cerro-miñana-32a5a4244/" target="_blank">
+                linkedin.com/in/carlos-cerro-miñana
+            </a>
+        </p>
 
-            <label data-lang-key="form_email">Email</label>
-            <input type="email" name="email" required>
+    </div>
 
-            <label data-lang-key="form_message">Messaggio</label>
-            <textarea name="message" rows="6" required></textarea>
-
-            <button type="submit" class="btn hero-btn-primary" data-lang-key="form_send">Invia</button>
-        </form>
-
-    </main>
+</main>
 
 </body>
-
 </html>

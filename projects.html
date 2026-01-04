@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progetti | Andrea De Pisapia</title>
+    <title>Projects | Carlos Cerro Miñana</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="main.js" defer></script>
@@ -12,21 +12,21 @@
 
 <body>
 
-<!-- NAVBAR MINIMAL -->
+<!-- NAVBAR -->
 <nav class="navbar">
     <div class="nav-container">
-        <a href="index.html" class="nav-logo">ADP</a>
+        <a href="index.html" class="nav-logo">CCM</a>
     </div>
 </nav>
 
-<!-- MAIN SECTION -->
+<!-- PROJECTS SECTION -->
 <section class="section projects-section">
 
-    <h2 class="projects-title" data-lang-key="projects_link">Progetti</h2>
+    <h2 class="projects-title" data-lang-key="projects_title">Projects</h2>
     <div class="neon-underline"></div>
 
     <p class="projects-subtitle">
-        Seleziona un progetto per aprire i dettagli
+        Select a project to view details
     </p>
 
     <div class="projects-grid">
@@ -34,52 +34,63 @@
         <!-- PROJECT 1 -->
         <div class="project-card"
             onclick="openProjectModal(
-                'HotRIO Control System',
-                'Firmware FPGA per acquisizione ADC, decodifica pacchetti HotRIO, gestione clock domain crossing e integrazione con CompactRIO.',
-                '<p><b>Tecnologie:</b> VHDL, FPGA Lattice, Fiber Optic SFP</p>'
+                'HotRIO FPGA Control System (ITER)',
+                'FPGA firmware development for the HotRIO platform used in ITER. High-speed ADC acquisition, SFP-based optical communication at 1Gbps, packet decoding, clock domain crossing, and integration with CompactRIO systems.',
+                '<p><b>Technologies:</b> VHDL, Lattice FPGA, SFP Fiber Optics, CDC, Real-Time Systems</p>'
             )">
-            <h3>HotRIO Control System</h3>
-            <p>Firmware FPGA per ITER</p>
+            <h3>HotRIO FPGA Control System</h3>
+            <p>ITER · High-speed FPGA firmware</p>
         </div>
 
         <!-- PROJECT 2 -->
         <div class="project-card"
             onclick="openProjectModal(
-                'OPD Startup Logic / FSM',
-                'Macchina a stati per la protezione del sistema OPD basato su HotRIO: voting 1oo2, gestione segnali critici e diagnostica.',
-                '<p><b>Tecnologie:</b> Safety FSM, VHDL, HotRIO, ICM</p>'
+                'Embedded Systems for Electric Vehicles',
+                'Work on embedded software validation and testing for electric vehicle prototypes. Involvement in ECU testing, communication interfaces, debugging, and system-level validation for CUPRA electric vehicles.',
+                '<p><b>Technologies:</b> Embedded C, Automotive Systems, ECU Testing, CAN</p>'
             )">
-            <h3>OPD Startup Logic</h3>
-            <p>FSM di sicurezza</p>
+            <h3>Electric Vehicle Embedded Systems</h3>
+            <p>Capgemini · Automotive software</p>
         </div>
 
         <!-- PROJECT 3 -->
         <div class="project-card"
             onclick="openProjectModal(
-                'Smart Greenhouse Control',
-                'Controllo predittivo avanzato (MPC, RMPC, SMPC, Markov Chains) + ARIMA modelling e simulazioni Monte Carlo.',
-                '<p><b>Tecnologie:</b> MPC, MATLAB, Modelli Probabilistici</p>'
+                'Custom Fiber-Optic Communication System',
+                'Design of a master–slave communication architecture over fiber optics with scalable nodes. Custom protocol definition, synchronization mechanisms, and deterministic data exchange.',
+                '<p><b>Technologies:</b> FPGA, VHDL, Fiber Optics, Custom Protocols</p>'
             )">
-            <h3>Smart Greenhouse Control</h3>
-            <p>MPC e simulazione predittiva</p>
+            <h3>Fiber-Optic Communication System</h3>
+            <p>Custom protocol · Scalable nodes</p>
         </div>
 
         <!-- PROJECT 4 -->
         <div class="project-card"
             onclick="openProjectModal(
-                'Robot Navigation ROS',
-                'Localizzazione tramite marker ArUco, controllo robotico e navigazione autonoma.',
-                '<p><b>Tecnologie:</b> ROS, C++, Computer Vision</p>'
+                'CMOS Voltage Controlled Delay Line (CERN)',
+                'Bachelor thesis developed in collaboration with CERN. Design and simulation of a self-regulated Voltage Controlled Delay Line (VCDL) in 65nm CMOS technology for clock generation in detector electronics.',
+                '<p><b>Technologies:</b> CMOS 65nm, Analog Design, Delay Lines, Cadence</p>'
             )">
-            <h3>Robot Navigation ROS</h3>
-            <p>Localizzazione e controllo robotico</p>
+            <h3>CMOS Delay Line – CERN</h3>
+            <p>Bachelor Thesis · Microelectronics</p>
+        </div>
+
+        <!-- PROJECT 5 -->
+        <div class="project-card"
+            onclick="openProjectModal(
+                'Smart Pantry IoT System',
+                'Design and implementation of a smart pantry system using weight sensors to monitor food inventory. Embedded firmware, data processing, and a mobile application for household usage.',
+                '<p><b>Technologies:</b> Embedded Systems, Sensors, IoT, Mobile App</p>'
+            )">
+            <h3>Smart Pantry IoT</h3>
+            <p>Embedded · Sensors · Mobile App</p>
         </div>
 
     </div>
 
 </section>
 
-<!-- MODAL DETTAGLI PROGETTO -->
+<!-- PROJECT MODAL -->
 <div id="projectModal" class="modal">
     <div class="modal-content">
         <span class="close-modal" onclick="closeProjectModal()">&times;</span>

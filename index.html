@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrea De Pisapia | Embedded & Control Engineer</title>
+    <title>Carlos Cerro Miñana | Embedded & Control Engineer</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -12,221 +12,150 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-    <!-- <script>
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-        document.documentElement.classList.add("light-mode");
-    }
-    </script> -->
-
 </head>
 
 <!-- PROJECT MODAL -->
 <div id="project-modal" class="modal">
     <div class="modal-content">
         <span class="modal-close">&times;</span>
-
         <h2 id="modal-title"></h2>
         <p id="modal-description"></p>
-
         <div id="modal-extra"></div>
     </div>
 </div>
 
 <body>
-    <div id="particles-js"></div>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">adp</a>
+<div id="particles-js"></div>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">ccm</a>
 
         <ul class="nav-links">
-            <li><a href="#about" data-lang-key="about_link">Chi sono</a></li>
-            <li><a href="#projects" data-lang-key="projects_link">Progetti</a></li>
-            <li><a href="#contact" data-lang-key="contact_link">Contatti</a></li>
+            <li><a href="#about" data-lang-key="about_link"></a></li>
+            <li><a href="#projects" data-lang-key="projects_link"></a></li>
+            <li><a href="#contact" data-lang-key="contact_link"></a></li>
         </ul>
 
-            <div class="lang-switch">
-                <span onclick="setLanguage('it')" id="lang-it">IT</span> |
-                <span onclick="setLanguage('en')" id="lang-en">EN</span>
-            </div>
+        <div class="lang-switch">
+            <span onclick="setLanguage('es')" id="lang-es">ES</span> |
+            <span onclick="setLanguage('en')" id="lang-en">EN</span>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- HERO SECTION -->
-    <header class="hero">
-        <div class="hero-content">
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-content">
+        <h1 class="hero_title" data-lang-key="hero_title"></h1>
+        <h2 class="hero_subtitle" data-lang-key="hero_subtitle"></h2>
+        <p class="hero_tagline" data-lang-key="hero_tagline"></p>
 
-            <h1 class="hero_title" data-lang-key="hero_title">Andrea De Pisapia</h1>
-            <h2 class="hero_subtitle" data-lang-key="hero_subtitle">Ingegnere Embedded & Control Systems</h2>
-
-            <p class="hero_tagline" data-lang-key="hero_tagline">
-                FPGA Design · Sistemi Real-Time · Robotica · Controllo & Simulazione
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#projects" class="btn hero-btn-primary" data-lang-key="btn_projects">
-                    I miei progetti
-                </a>
-                <a href="adepisapia_CV.pdf" class="btn hero-btn-secondary" data-lang-key="btn_cv">
-                    Scarica CV
-                </a>
-            </div>
-
+        <div class="hero-buttons">
+            <a href="#projects" class="btn hero-btn-primary" data-lang-key="btn_projects"></a>
+            <a href="Carlos_Cerro_Minana_CV.pdf" class="btn hero-btn-secondary" data-lang-key="btn_cv"></a>
         </div>
-    </header>
+    </div>
+</header>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section"> 
-        <!-- <section id="about" class="section reveal"> -->
-        <h2 data-lang-key="about_title">Chi sono</h2>
-        <p data-lang-key="about_text">
-            Sono un ingegnere di sistemi embedded con esperienza in FPGA, controllo,
-            modellazione e sistemi real-time.
-            Ho lavorato allo sviluppo del firmware HotRIO per ITER, sistemi APDCAM/OPD Safety
-            e progetti avanzati di robotica e simulazione.
-        </p>
-    </section>
+<!-- ABOUT -->
+<section id="about" class="section reveal">
+    <h2 data-lang-key="about_title"></h2>
+    <p data-lang-key="about_text"></p>
+</section>
 
-    <section id="timeline" class="section reveal">
-    <h2>Timeline</h2>
+<!-- TIMELINE -->
+<section id="timeline" class="section reveal">
+    <h2 data-lang-key="timeline_title"></h2>
 
     <div class="timeline">
-
         <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-                <h3 data-lang-key="timeline_content1">Embedded Systems Engineer - Fusion for Energy</h3>
-                <span class="timeline-date">2024 - Oggi</span>
-                <p data-lang-key="timeline_content2">Sviluppo firmware FPGA (HotRIO, APDCAM, OPD), comunicazione 1Gbps, logiche FSM, diagnostics.</p>
+                <h3 data-lang-key="timeline_content1"></h3>
+                <span class="timeline-date">2024 - Present</span>
+                <p data-lang-key="timeline_content2"></p>
             </div>
         </div>
 
         <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-                <h3 data-lang-key="timeline_content3">Master Automation Engineering & Robotics</h3>
-                <span class="timeline-date">2021 - 2024</span>
-                <p data-lang-key="timeline_content4">Specializzazione in controlli avanzati, sistemi real-time, robotica e simulazioni MATLAB/Simulink.</p>
+                <h3 data-lang-key="timeline_content3"></h3>
+                <span class="timeline-date">2023 - 2024</span>
+                <p data-lang-key="timeline_content4"></p>
             </div>
         </div>
 
         <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-                <h3 data-lang-key="timeline_content5">Bachelor Automation Engineering</h3>
-                <span class="timeline-date">2017 - 2021</span>
-                <p data-lang-key="timeline_content6">Fondamenti di controllo, elettronica, sistemi embedded.</p>
+                <h3 data-lang-key="timeline_content5"></h3>
+                <span class="timeline-date">2023</span>
+                <p data-lang-key="timeline_content6"></p>
             </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3 data-lang-key="timeline_content7"></h3>
+                <span class="timeline-date">2018 - 2023</span>
+                <p data-lang-key="timeline_content8"></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+    <h2 data-lang-key="projects_title"></h2>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <h3>HotRIO Control System</h3>
+            <p data-lang-key="project1_detail"></p>
+            <span class="tag">FPGA</span>
+            <span class="tag">VHDL</span>
+            <span class="tag">Real-Time</span>
+        </div>
+
+        <div class="project-card">
+            <h3>HVPPS Logic & FSM</h3>
+            <p data-lang-key="project2_detail"></p>
+            <span class="tag">Safety</span>
+            <span class="tag">FSM</span>
+            <span class="tag">Diagnostics</span>
+        </div>
+
+        <div class="project-card">
+            <h3>HotRIO Daisy Chain</h3>
+            <p data-lang-key="project3_detail"></p>
+            <span class="tag">FPGA</span>
+            <span class="tag">VHDL</span>
+            <span class="tag">Fiber-Optic</span>
+        </div>
+
+        <div class="project-card">
+            <h3>VCDL using CMOS 65 nm</h3>
+            <p data-lang-key="project4_detail"></p>
+            <span class="tag">CERN</span>
+            <span class="tag">Quartus 2</span>
+            <span class="tag">KiCad</span>
         </div>
 
     </div>
-    </section>
+</section>
 
-    <section id="skills" class="section reveal">
-    <h2 data-lang-key="skills_title">Competenze</h2>
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <h2 data-lang-key="contact_title"></h2>
+    <p>Email: <a href="mailto:carloscerrom2@gmail.com">carloscerrom2@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/cerroca/" target="_blank">https://github.com/cerroca/</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/carlos-cerro-mi%C3%B1ana-32a5a4244/?trk=opento_sprofile_details" target="_blank">LinkedIn</a></p>
+</section>
 
-    <div class="skills-container">
-
-        <div class="skill-bar">
-            <span>FPGA / VHDL</span>
-            <div class="bar"><div class="progress" style="width: 85%;"></div></div>
-        </div>
-
-        <div class="skill-bar">
-            <span>Embedded C / FreeRTOS</span>
-            <div class="bar"><div class="progress" style="width: 80%;"></div></div>
-        </div>
-
-        <div class="skill-bar">
-            <span>MATLAB / Simulink</span>
-            <div class="bar"><div class="progress" style="width: 90%;"></div></div>
-        </div>
-
-        <div class="skill-bar">
-            <span>Control Systems / FSM</span>
-            <div class="bar"><div class="progress" style="width: 90%;"></div></div>
-        </div>
-
-        <div class="skill-bar">
-            <span>ROS / Robotics</span>
-            <div class="bar"><div class="progress" style="width: 75%;"></div></div>
-        </div>
-
-        <div class="skill-bar">
-            <span>Python / C++</span>
-            <div class="bar"><div class="progress" style="width: 70%;"></div></div>
-        </div>
-
-    </div>
-    </section>
-
-
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="section">
-        <h2 data-lang-key="projects_title">I miei progetti</h2>
-
-        <div class="projects-grid">
-        <!-- <div class="project-card reveal scan-effect"> -->
-
-            <!-- Example Project Card -->
-            <div class="project-card" onclick="openProjectModal(
-                'HotRIO Control System',
-                'FPGA firmware for ADC acquisition, 1Gbps SFP transceiver, domain crossing, and integration with CompactRIO.',
-                '<p><b>Tecnologies:</b> VHDL, High-speed serdes, Lattice Diamond, Fiber Optics</p>'
-            )">
-                <h3>HotRIO Control System per ITER</h3>
-                <p data-lang-key="project1_detail">Firmware FPGA per acquisizione SFP e ADC, decodifica pacchetti e sincronizzazione.</p>
-                <span class="tag">FPGA</span>
-                <span class="tag">VHDL</span>
-                <span class="tag">Real-Time</span>
-            </div>
-
-            <div class="project-card" onclick="openProjectModal(
-                'OPD Logic & FSM',
-                'Safety logic for the Disruption Mitigation System with 1oo2 voting, latching, operational FSM, and advanced diagnostics.',
-                '<p><b>Tecnologies:</b> VHDL, Safety Logic, Diagnostics</p>'
-            )">
-                <h3>OPD Logic & FSM</h3>
-                <p data-lang-key="project2_detail">Logica di sicurezza per il Disruption Mitigation System, voting 1oo2, FSM avanzata e diagnostica.</p>
-                <span class="tag">Control</span>
-                <span class="tag">FSM</span>
-                <span class="tag">Safety</span>
-            </div>
-
-            <div class="project-card" onclick="openProjectModal(
-                'Smart Greenhouse Control',
-                'Control system based on MPC, RMPC, SMPC, Markov chains, ARIMA filter, and Monte Carlo simulations.',
-                '<p><b>Tecnologies:</b> MATLAB, MPC, Optimization, Forecasting</p>'
-            )">
-                <h3>Smart Greenhouse Control</h3>
-                <p data-lang-key="project3_detail">MPC, RMPC, SMPC con Markov, ARIMA e Monte Carlo simulations.</p>
-                <span class="tag">MPC</span>
-                <span class="tag">MATLAB</span>
-                <span class="tag">Simulation</span>
-            </div>
-
-            <div class="project-card" onclick="openProjectModal(
-                'Robot Navigation ROS',
-                'Kinematic control, SLAM, path tracking, and simulation in Gazebo.',
-                '<p><b>Tecnologies:</b> ROS, C++, Gazebo, Computer Vision</p>'
-            )">
-                <h3>Robot Navigation ROS</h3>
-                <p data-lang-key="project4_detail">SLAM, Localizzazione di marker ArUco e controllo su piattaforma mobile.</p>
-                <span class="tag">ROS</span>
-                <span class="tag">C++</span>
-                <span class="tag">Computer Vision</span>
-            </div>
-
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section">
-    <h2 data-lang-key="contact_title">Contatti</h2>
-        <p>Email: <a href="mailto:andreadepisapia3@gmail.com">andreadepisapia3@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/andrea-de-pisapia-6a5562253/" target="_blank"> linkedin.com/in/andrea-de-pisapia </a> </p>
-        <p>GitHub: <a href="https://github.com/adep94" target="_blank">github.com/adep94</a> </p>
-    </section>
-
-    <script src="assets/js/main.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
