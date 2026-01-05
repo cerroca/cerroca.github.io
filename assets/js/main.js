@@ -45,6 +45,7 @@ const translations = {
             "Proyecto de la UPC, la UB y el CERN para actualizar el LHCb. Estudio y diseño de líneas de retardo autorreguladas para la sincronización de relojes.",
         project5_detail:
             "Diseño e implementacion de una despensa inteligente con sensores de peso y aplicacion movil para le hogar.",
+        skills_title: "Competencias",
         contact_title: "Contacto"
     },
 
@@ -91,7 +92,7 @@ const translations = {
             "UPC, UB and CERN project to update the LHCb. Study and design of self-regulated delay lines for clock synchronization.",
         project5_detail:
             "Design and implementation of a smart pantry with weight sensors and a mobile application for home use.",
-
+        skills_title: "Skills",
         contact_title: "Contact"
     }
 };
