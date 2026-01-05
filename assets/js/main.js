@@ -1,6 +1,14 @@
 /* =============================================
    LANGUAGE SYSTEM ES / EN
 ============================================= */
+const es = document.getElementById("lang-es");
+const en = document.getElementById("lang-en");
+
+if (es && en) {
+  es.classList.remove("lang-active");
+  en.classList.remove("lang-active");
+  document.getElementById("lang-" + lang).classList.add("lang-active");
+}
 
 const translations = {
     es: {
