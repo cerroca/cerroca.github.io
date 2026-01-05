@@ -42,7 +42,7 @@ const translations = {
         project3_detail:
             "Logica master slave de sistema de comunicacion persoalizado para fibra optica con nodos variables",
         project4_detail:
-            "Colaboración entre la UPC, UB y CERN para el proyecto de reforma de LHCb. Estudio y diseño de una línea de retardos autorregulables proporcionando señales de reloj para los demás elementos.",
+            "Proyecto de la UPC, la UB y el CERN para actualizar el LHCb. Estudio y diseño de líneas de retardo autorreguladas para la sincronización de relojes.",
         project5_detail:
             "Diseño e implementacion de una despensa inteligente con sensores de peso y aplicacion movil para le hogar.",
         contact_title: "Contacto"
@@ -88,7 +88,7 @@ const translations = {
         project3_detail:
             "Master-slave logic for a custom fiber-optic communication system with scalable nodes.",
         project4_detail:
-            "Collaboration between UPC, UB and CERN for the LHCb upgrade project. Study and design of self-regulated delay lines providing clock signals to other system components.",
+            "UPC, UB and CERN project to update the LHCb. Study and design of self-regulated delay lines for clock synchronization.",
         project5_detail:
             "Design and implementation of a smart pantry with weight sensors and a mobile application for home use.",
 
@@ -134,18 +134,18 @@ if (typeof particlesJS !== 'undefined') {
     try {
         particlesJS("particles-js", {
             "particles": {
-                "number": { "value": 80, "density": { "enable": true, "value_area": 900 } },
-                "color": { "value": "#00e5ff" },
-                "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" } },
-                "opacity": { "value": 0.3, "random": true, "anim": { "enable": false } },
-                "size": { "value": 3, "random": true, "anim": { "enable": false } },
-                "line_linked": { "enable": true, "distance": 150, "color": "#00e5ff", "opacity": 0.25, "width": 1 },
-                "move": { "enable": true, "speed": 1.2, "direction": "none", "out_mode": "out" }
+                "number": { "value": 50, "density": { "enable": true, "value_area": 1000 } },
+                "color": { "value": "#14B8A6" },
+                "shape": { "type": "polygon", "stroke": { "width": 1, "color": "#0A2540" }, "polygon": { "nb_sides": 6 } },
+                "opacity": { "value": 0.4, "random": false, "anim": { "enable": false } },
+                "size": { "value": 2, "random": false, "anim": { "enable": false } },
+                "line_linked": { "enable": true, "distance": 140, "color": "#14B8A6", "opacity": 0.6, "width": 2 },
+                "move": { "enable": true, "speed": 0.3, "direction": "none", "out_mode": "out", "random": false, "straight": false }
             },
             "interactivity": {
                 "detect_on": "canvas",
-                "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" } },
-                "modes": { "grab": { "distance": 180, "line_linked": { "opacity": 0.35 } }, "push": { "particles_nb": 4 } }
+                "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "bubble" } },
+                "modes": { "repulse": { "distance": 50, "duration": 0.4 }, "bubble": { "distance": 120, "size": 3, "duration": 2, "opacity": 0.8 } }
             },
             "retina_detect": true
         });
