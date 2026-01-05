@@ -1,14 +1,6 @@
 /* =============================================
-   LANGUAGE SYSTEM ES / EN
+   LANGUAGE SYSTEM ES / EN + UI behavior
 ============================================= */
-const es = document.getElementById("lang-es");
-const en = document.getElementById("lang-en");
-
-if (es && en) {
-  es.classList.remove("lang-active");
-  en.classList.remove("lang-active");
-  document.getElementById("lang-" + lang).classList.add("lang-active");
-}
 
 const translations = {
     es: {
@@ -17,8 +9,8 @@ const translations = {
         contact_link: "Contacto",
 
         hero_title: "Carlos Cerro Miñana",
-        hero_subtitle: "Ingeniero de Firmeware y Sistemas de Control",
-        hero_tagline: "Diseño FPGA · Sistemas en Tiempo Real · Software · Control y Simulación · Electronica",
+        hero_subtitle: "Ingeniero de Firmware y Sistemas de Control",
+        hero_tagline: "Diseño FPGA · Sistemas en Tiempo Real · Software · Control y Simulación · Electrónica",
 
         btn_projects: "Mis proyectos",
         btn_cv: "Descargar CV",
@@ -36,7 +28,7 @@ const translations = {
         timeline_content4:
             "10/2023 - 10/2024 : Trabajando con prototipos de vehiculos electricos en testeo de software para Cupra",
         timeline_content5: "Diseño de una Voltage Contoled Delay Line con Tecnológica CMOS de 65 nm - Cern",
-        timeline_content6: 
+        timeline_content6:
             "2023 : Proyecto CERN del departamento de microelectrónica de la UPC que fue mi tesis final de licenciatura.",
         timeline_content7: "Grado en Ingeniería Electrónica de Telecomunicaciones - UPC",
         timeline_content8:
@@ -77,16 +69,16 @@ const translations = {
         timeline_title: "Career",
         timeline_content1: "Embedded Systems Engineer – Fusion for Energy",
         timeline_content2:
-            "Present – 10/2024: FPGA firmware development (HotRIO, HVPPS, ADCs), 1Gbps communication, FSM logic and diagnostics.",
+            "FPGA firmware development (HotRIO, HVPPS, ADCs), 1Gbps communication, FSM logic and diagnostics.",
         timeline_content3: "Electric Vehicle Systems Engineer – Capgemini",
         timeline_content4:
-            "10/2023 – 10/2024: Working with electric vehicle prototypes, performing software testing for CUPRA.",
+            "Working with electric vehicle prototypes, performing software testing for CUPRA.",
         timeline_content5: "Design of a Voltage Controlled Delay Line in 65 nm CMOS Technology – CERN",
         timeline_content6:
             "CERN project within the UPC Microelectronics Department, developed as my final bachelor thesis.",
         timeline_content7: "Bachelor’s Degree in Telecommunications Electronic Engineering – UPC",
         timeline_content8:
-            "2018 – 2023: Fundamentals of control, electronics and embedded systems.",
+            "Fundamentals of control, electronics and embedded systems.",
 
         projects_title: "Projects",
         project1_detail:
@@ -105,19 +97,108 @@ const translations = {
 };
 
 function setLanguage(lang) {
-    localStorage.setItem("lang", lang);
+    try {
+        localStorage.setItem("lang", lang);
+        console.log('setLanguage()', lang);
 
-    document.querySelectorAll("[data-lang-key]").forEach(el => {
-        const key = el.getAttribute("data-lang-key");
-        el.textContent = translations[lang][key];
-    });
+        document.querySelectorAll("[data-lang-key]").forEach(el => {
+            const key = el.getAttribute("data-lang-key");
+            const value = translations[lang] && translations[lang][key];
+            el.innerHTML = value !== undefined ? value : '';
+        });
 
-    document.getElementById("lang-es").classList.remove("lang-active");
-    document.getElementById("lang-en").classList.remove("lang-active");
-    document.getElementById("lang-" + lang).classList.add("lang-active");
+        const elEs = document.getElementById("lang-es");
+        const elEn = document.getElementById("lang-en");
+        if (elEs) elEs.classList.remove("lang-active");
+        if (elEn) elEn.classList.remove("lang-active");
+        const langEl = document.getElementById("lang-" + lang);
+        if (langEl) langEl.classList.add("lang-active");
+    } catch (err) {
+        console.error('Error in setLanguage:', err);
+    }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+// Apply saved/default language on load (safe for defer/normal script)
+function applyInitialLanguage() {
     const lang = localStorage.getItem("lang") || "es";
     setLanguage(lang);
+}
+
+document.addEventListener("DOMContentLoaded", applyInitialLanguage);
+if (document.readyState !== 'loading') applyInitialLanguage();
+
+/* ===============================================
+   PARTICLES BACKGROUND (if available)
+================================================ */
+if (typeof particlesJS !== 'undefined') {
+    try {
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 900 } },
+                "color": { "value": "#00e5ff" },
+                "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" } },
+                "opacity": { "value": 0.3, "random": true, "anim": { "enable": false } },
+                "size": { "value": 3, "random": true, "anim": { "enable": false } },
+                "line_linked": { "enable": true, "distance": 150, "color": "#00e5ff", "opacity": 0.25, "width": 1 },
+                "move": { "enable": true, "speed": 1.2, "direction": "none", "out_mode": "out" }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" } },
+                "modes": { "grab": { "distance": 180, "line_linked": { "opacity": 0.35 } }, "push": { "particles_nb": 4 } }
+            },
+            "retina_detect": true
+        });
+    } catch (err) {
+        console.warn('particlesJS init failed', err);
+    }
+}
+
+/* =============================
+   PROJECT MODALS
+============================= */
+const modal = document.getElementById("project-modal");
+const modalTitle = document.getElementById("modal-title");
+const modalDescription = document.getElementById("modal-description");
+const modalExtra = document.getElementById("modal-extra");
+const modalClose = document.querySelector(".modal-close");
+
+function openProjectModal(title, description, extraHTML) {
+    if (!modal) return;
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+    modalExtra.innerHTML = extraHTML || '';
+    modal.style.display = "flex";
+}
+
+if (modalClose) modalClose.addEventListener("click", () => modal.style.display = "none");
+window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
+
+/* Scroll reveal */
+function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+    for (let i = 0; i < reveals.length; i++) {
+        const element = reveals[i];
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (elementTop < windowHeight - 80) element.classList.add("active");
+    }
+}
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
+/* Smooth scrolling for anchor links */
+document.addEventListener('click', function (e) {
+    const el = e.target.closest("a[href^='#']");
+    if (!el) return;
+    const href = el.getAttribute('href');
+    if (!href || href === '#') return;
+    const target = document.querySelector(href);
+    if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.offsetTop - 40, behavior: 'smooth' });
+    }
 });
+
+/* Expose openProjectModal globally for inline onclick in projects.html */
+window.openProjectModal = openProjectModal;
